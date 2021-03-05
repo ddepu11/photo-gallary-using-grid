@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  max-height: 100vh;
+  color: white;
+  background: linear-gradient(to right, #26d0ce, #1a2980);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  grid-auto-rows: 200px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 3em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0 0.35em 1.195em,
+    rgba(2, 8, 20, 0.1) 0px 0.175rem 0.5rem;
+  transform: translateY(-1px) scale(1.08);
+}
+
+/* Medium Screen */
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+  .last {
+    grid-column: 1/6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    padding: 11px 5px;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+  }
+}
