@@ -73,6 +73,7 @@ h1 {
   }
   .last {
     grid-column: 1/6;
+    grid-row: span 2 / auto;
   }
 }
 
